@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './BurgerMenu.css'
 
 const BurgerMenu = () => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
     const setOpenState = () => {
         setIsOpen(!isOpen)
     }
