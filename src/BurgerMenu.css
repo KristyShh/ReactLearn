@@ -1,0 +1,64 @@
+
+body{
+    background-color: #272727;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.menu-button,
+.menu-button-open {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #272733;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border: 3px solid #fff;
+}
+.menu-button-line{
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(241, 185, 165);
+    transition: all 0.5s ease-in-out;
+    
+}
+.menu-button-line::before,
+.menu-button-line::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(241, 185, 165);
+    transition: all 0.5s ease-in-out;
+}
+.menu-button-line::before{
+    transform: translateY(-16px);
+}
+.menu-button-line::after{
+    transform: translateY(16px);
+}
+
+.menu-button-open .menu-button-line{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu-button-open .menu-button-line::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-button-open .menu-button-line::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
